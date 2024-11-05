@@ -31,19 +31,15 @@ export function generateStaticParams() {
     "Friday, 15:00",
   ];
 
-  return doctors.flatMap(doctorId => 
-    slots.map(slot => ({
+  return doctors.flatMap((doctorId) =>
+    slots.map((slot) => ({
       doctorId: doctorId.toString(),
-      slot: encodeURIComponent(slot)
+      slot: encodeURIComponent(slot),
     }))
   );
 }
 
-export default function BookingPage({
-  params,
-}: {
-  params: { doctorId: string; slot: string };
-}) {
+export default function BookingPage({ params }: { params: { doctorId: string; slot: string } }) {
   return (
     <main className="flex-1 bg-gray-50">
       <BookingForm doctorId={params.doctorId} slot={params.slot} />

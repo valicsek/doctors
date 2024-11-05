@@ -1,6 +1,5 @@
 "use client";
 
-import { useState } from "react";
 import { DoctorCard } from "./doctor-card";
 
 // Mock weekly schedule data that will be the same for all doctors
@@ -89,7 +88,7 @@ const doctors: Doctor[] = [
     languages: ["English", "Hungarian"],
     hasDiscount: true,
     acceptsCard: true,
-    acceptsHealthInsurance: true
+    acceptsHealthInsurance: true,
   },
   {
     id: 2,
@@ -103,7 +102,7 @@ const doctors: Doctor[] = [
     rating: 4.8,
     price: 30000,
     languages: ["Hungarian", "German"],
-    acceptsCard: true
+    acceptsCard: true,
   },
   {
     id: 3,
@@ -118,7 +117,7 @@ const doctors: Doctor[] = [
     price: 20000,
     languages: ["Hungarian", "English", "French"],
     hasDiscount: true,
-    acceptsHealthInsurance: true
+    acceptsHealthInsurance: true,
   },
   {
     id: 4,
@@ -132,8 +131,8 @@ const doctors: Doctor[] = [
     price: 35000,
     languages: ["Hungarian", "English"],
     acceptsCard: true,
-    acceptsHealthInsurance: true
-  }
+    acceptsHealthInsurance: true,
+  },
 ];
 
 interface DoctorListProps {
@@ -167,20 +166,17 @@ export function DoctorList({
     const matchesSpecialty = !specialty || doctor.specialty.toLowerCase() === specialty.toLowerCase();
     const matchesCity = !city || doctor.city.toLowerCase() === city.toLowerCase();
     const matchesFeatured = !featured || doctor.featured === true;
-    const matchesSearch = !searchTerm || 
-      doctor.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
-      doctor.specialty.toLowerCase().includes(searchTerm.toLowerCase());
+    const matchesSearch = !searchTerm || doctor.name.toLowerCase().includes(searchTerm.toLowerCase()) || doctor.specialty.toLowerCase().includes(searchTerm.toLowerCase());
     const matchesRating = doctor.rating ? doctor.rating >= minRating : false;
     const matchesPrice = doctor.price >= priceRange[0] && doctor.price <= priceRange[1];
-    const matchesLanguages = languages.length === 0 || 
-      languages.some(lang => doctor.languages.includes(lang));
+    const matchesLanguages = languages.length === 0 || languages.some((lang) => doctor.languages.includes(lang));
     const matchesDiscount = !hasDiscount || doctor.hasDiscount;
     const matchesCard = !acceptsCard || doctor.acceptsCard;
     const matchesInsurance = !acceptsHealthInsurance || doctor.acceptsHealthInsurance;
 
-    return matchesSpecialty && matchesCity && matchesFeatured && matchesSearch &&
-           matchesRating && matchesPrice && matchesLanguages && matchesDiscount &&
-           matchesCard && matchesInsurance;
+    return (
+      matchesSpecialty && matchesCity && matchesFeatured && matchesSearch && matchesRating && matchesPrice && matchesLanguages && matchesDiscount && matchesCard && matchesInsurance
+    );
   });
 
   if (limit) {
@@ -190,19 +186,12 @@ export function DoctorList({
   return (
     <div className="space-y-6">
       {filteredDoctors.map((doctor) => (
-        <DoctorCard
-          key={doctor.id}
-          doctor={doctor}
-          schedule={defaultWeeklySchedule}
-        />
+        <DoctorCard key={doctor.id} doctor={doctor} schedule={defaultWeeklySchedule} />
       ))}
 
       {filteredDoctors.length === 0 && (
         <div className="text-center py-12">
-          <p className="text-xl text-gray-600">
-            No doctors found matching your criteria.
-            Please try different search terms.
-          </p>
+          <p className="text-xl text-gray-600">No doctors found matching your criteria. Please try different search terms.</p>
         </div>
       )}
     </div>

@@ -16,6 +16,11 @@
             "title": "Kiemelt orvosok"
         }
     },
+    "Navbar": {
+        "forDoctors": "Orvosoknak",
+        "signIn": "Bejelentkezés",
+        "bookingsToday": "{count} foglalás ma"
+    },
     "Doctor": {
         "languages": "Beszélt nyelvek",
         "reviews": "{count} vélemény",

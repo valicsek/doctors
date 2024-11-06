@@ -5,11 +5,13 @@ import Link from 'next/link'
 import { usePathname } from 'next/navigation'
 import { routing } from '@/i18n/routing'
 import { useState } from 'react'
+import { useTranslations } from 'next-intl'
 
 export function Navbar() {
     const pathname = usePathname()
     const currentLocale = pathname.split('/')[1]
     const [isMenuOpen, setIsMenuOpen] = useState(false)
+    const t = useTranslations('Navbar')
 
     const locales = routing.locales
 
@@ -34,7 +36,7 @@ export function Navbar() {
                                 </span>
                             </Link>
                             <span className="text-sm font-bold text-tertiary">
-                                215 booking today
+                                {t('bookingsToday', { count: 215 })}
                             </span>
                         </div>
 
@@ -54,13 +56,13 @@ export function Navbar() {
                                 href={`/${currentLocale}/for-doctors`}
                                 className="text-white hover:text-white/90 px-4 py-2 rounded-md transition-colors"
                             >
-                                For Doctors
+                                {t('forDoctors')}
                             </Link>
                             <Link
                                 href={`/${currentLocale}/signin`}
                                 className="bg-white text-primary hover:bg-white/90 px-4 py-2 rounded-md transition-colors"
                             >
-                                Sign In
+                                {t('signIn')}
                             </Link>
                         </div>
 
@@ -96,13 +98,13 @@ export function Navbar() {
                             href={`/${currentLocale}/for-doctors`}
                             className="w-full text-center text-white hover:text-white/90 px-4 py-2 rounded-md transition-colors"
                         >
-                            For Doctors
+                            {t('forDoctors')}
                         </Link>
                         <Link
                             href={`/${currentLocale}/signin`}
                             className="w-full text-center bg-white text-primary hover:bg-white/90 px-4 py-2 rounded-md transition-colors"
                         >
-                            Sign In
+                            {t('signIn')}
                         </Link>
                     </div>
                 </div>

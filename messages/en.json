@@ -16,6 +16,11 @@
             "title": "Featured Doctors"
         }
     },
+    "Navbar": {
+        "forDoctors": "For Doctors",
+        "signIn": "Sign In",
+        "bookingsToday": "{count} bookings today"
+    },
     "Doctor": {
         "languages": "Languages",
         "reviews": "{count} reviews",

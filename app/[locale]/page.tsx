@@ -11,7 +11,7 @@ export default function Home() {
     return (
         <main className="flex-1 space-y-4">
             {/* Hero Section */}
-            <div className="bg-primary text-white">
+            <div className="bg-primary text-white relative">
                 <div className="max-w-5xl mx-auto px-4 py-8">
                     <h1 className="text-4xl md:text-5xl font-bold mb-4">
                         {t('heroSection.title')}
@@ -19,7 +19,6 @@ export default function Home() {
                     <p className="text-xl opacity-90 mb-8">
                         {t('heroSection.description')}
                     </p>
-
                     {/* Search Box */}
                     <SearchBox />
                 </div>

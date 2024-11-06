@@ -68,66 +68,64 @@ export function SearchBox() {
     }
 
     return (
-        <div className="bg-white text-black rounded-lg p-4 shadow-lg relative">
-            <div className="grid gap-4 md:grid-cols-[1fr,1fr,auto]">
-                <div className="relative">
-                    <div className="absolute inset-y-0 left-3 flex items-center pointer-events-none">
-                        <Search className="h-5 w-5 text-gray-400" />
-                    </div>
-                    <input
-                        type="text"
-                        placeholder={t('specialtyPlaceholder')}
-                        value={searchTerm}
-                        onChange={(e) => {
-                            setSearchTerm(e.target.value)
-                            setShowSuggestions(true)
-                        }}
-                        onFocus={() => setShowSuggestions(true)}
-                        className="w-full pl-10 pr-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-primary/20 focus:border-primary"
-                    />
-                    {/* Suggestions dropdown */}
-                    {showSuggestions && suggestions.length > 0 && (
-                        <div className="absolute z-10 w-full mt-1 bg-white border border-gray-200 rounded-md shadow-lg">
-                            {suggestions.map((suggestion, index) => (
-                                <div
-                                    key={index}
-                                    className="px-4 py-2 hover:bg-gray-100 cursor-pointer"
-                                    onClick={() =>
-                                        handleSuggestionClick(suggestion)
-                                    }
-                                >
-                                    {suggestion}
-                                </div>
-                            ))}
-                        </div>
-                    )}
+        <div className="flex flex-col md:flex-row relative">
+            <div className="relative flex-1">
+                <div className="absolute inset-y-0 left-3 flex items-center pointer-events-none">
+                    <Search className="h-5 w-5 text-gray-400" />
                 </div>
-
-                <div className="relative">
-                    <div className="absolute inset-y-0 left-3 flex items-center pointer-events-none">
-                        <MapPin className="h-5 w-5 text-gray-400" />
-                    </div>
-                    <select
-                        value={city}
-                        onChange={(e) => setCity(e.target.value)}
-                        className="w-full pl-10 pr-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-primary/20 focus:border-primary appearance-none bg-white"
-                    >
-                        <option value="">{t('cityPlaceholder')}</option>
-                        {cities.map((city) => (
-                            <option key={city} value={city}>
-                                {city}
-                            </option>
+                <input
+                    type="text"
+                    placeholder={t('specialtyPlaceholder')}
+                    value={searchTerm}
+                    onChange={(e) => {
+                        setSearchTerm(e.target.value)
+                        setShowSuggestions(true)
+                    }}
+                    onFocus={() => setShowSuggestions(true)}
+                    className="w-full pl-10 pr-4 py-3 border border-gray-300 rounded-l-full md:rounded-l-full md:rounded-r-none focus:outline-none focus:ring-2 focus:ring-primary/20 focus:border-primary"
+                />
+                {/* Suggestions dropdown */}
+                {showSuggestions && suggestions.length > 0 && (
+                    <div className="absolute z-10 w-full mt-1 bg-white border border-gray-200 rounded-md shadow-lg">
+                        {suggestions.map((suggestion, index) => (
+                            <div
+                                key={index}
+                                className="px-4 py-2 hover:bg-gray-100 cursor-pointer"
+                                onClick={() =>
+                                    handleSuggestionClick(suggestion)
+                                }
+                            >
+                                {suggestion}
+                            </div>
                         ))}
-                    </select>
-                </div>
-
-                <button
-                    onClick={handleSearch}
-                    className="px-8 py-2 bg-primary text-white rounded-md hover:bg-primary/90 transition-colors"
-                >
-                    {t('searchButton')}
-                </button>
+                    </div>
+                )}
             </div>
+
+            <div className="relative flex-1">
+                <div className="absolute inset-y-0 left-3 flex items-center pointer-events-none">
+                    <MapPin className="h-5 w-5 text-gray-400" />
+                </div>
+                <select
+                    value={city}
+                    onChange={(e) => setCity(e.target.value)}
+                    className="w-full pl-10 pr-4 py-3 border border-gray-300 md:rounded-none focus:outline-none focus:ring-2 focus:ring-primary/20 focus:border-primary appearance-none bg-white text-gray-500"
+                >
+                    <option value="">{t('cityPlaceholder')}</option>
+                    {cities.map((city) => (
+                        <option key={city} value={city}>
+                            {city}
+                        </option>
+                    ))}
+                </select>
+            </div>
+
+            <button
+                onClick={handleSearch}
+                className="px-8 py-3 bg-secondary text-white rounded-r-full md:rounded-r-full md:rounded-l-none hover:bg-primary/90 transition-colors"
+            >
+                {t('searchButton')}
+            </button>
         </div>
     )
 }

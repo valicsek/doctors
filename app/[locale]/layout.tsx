@@ -1,6 +1,6 @@
 import './globals.css'
 import { clsx } from 'clsx'
-import { Inter } from 'next/font/google'
+import { Montserrat } from 'next/font/google'
 import { NextIntlClientProvider } from 'next-intl'
 import { getMessages, setRequestLocale } from 'next-intl/server'
 import { ReactNode } from 'react'
@@ -8,7 +8,7 @@ import type { Metadata } from 'next'
 import { Navbar } from '@/components/layout/navbar'
 import { Footer } from '@/components/layout/footer'
 
-const inter = Inter({ subsets: ['latin'] })
+const montserrat = Montserrat({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
     title: 'DoctorFinder | Find Your Healthcare Professional',
@@ -26,7 +26,9 @@ export default async function Layout({ children }: { children: ReactNode }) {
 
     return (
         <html className="h-full" lang={browserLocale}>
-            <body className={clsx(inter.className, 'flex h-full flex-col')}>
+            <body
+                className={clsx(montserrat.className, 'flex h-full flex-col')}
+            >
                 <NextIntlClientProvider messages={messages}>
                     <Navbar />
                     {children}

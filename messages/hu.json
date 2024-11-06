@@ -1,80 +1,80 @@
 {
-  "HomePage": {
-    "heroSection": {
-      "title": "Találja meg egészségügyi szakemberét",
-      "description": "Keressen képzett orvosokat és specialistákat hálózatunkban"
+    "HomePage": {
+        "heroSection": {
+            "title": "Találja meg egészségügyi szakemberét",
+            "description": "Keressen képzett orvosokat és specialistákat hálózatunkban"
+        },
+        "searchBox": {
+            "specialtyPlaceholder": "Keresés szakterület vagy orvos neve alapján...",
+            "cityPlaceholder": "Válasszon várost",
+            "searchButton": "Keresés"
+        },
+        "popularSpecialties": {
+            "title": "Népszerű szakterületek"
+        },
+        "featuredDoctors": {
+            "title": "Kiemelt orvosok"
+        }
     },
-    "searchBox": {
-      "specialtyPlaceholder": "Keresés szakterület vagy orvos neve alapján...",
-      "cityPlaceholder": "Válasszon várost",
-      "searchButton": "Keresés"
+    "Doctor": {
+        "languages": "Beszélt nyelvek",
+        "reviews": "{count} vélemény",
+        "review": "{count} vélemény",
+        "consultationFee": "Konzultációs díj",
+        "paymentMethods": "Fizetési módok",
+        "cardAccepted": "Bankkártyás fizetés elérhető",
+        "healthInsurance": "Egészségbiztosítás elfogadott",
+        "selectedTime": "Választott időpont",
+        "availableAppointments": "Elérhető időpontok",
+        "noAvailableSlots": "Nincs szabad időpont"
     },
-    "popularSpecialties": {
-      "title": "Népszerű szakterületek"
+    "Specialties": {
+        "gynecology": "Nőgyógyászat",
+        "internalMedicine": "Belgyógyászat",
+        "otolaryngology": "Fül-orr-gégészet",
+        "psychology": "Pszichológia",
+        "dentistry": "Fogászat",
+        "ultrasound": "Ultrahang",
+        "vascularSurgery": "Érsebészet",
+        "urology": "Urológia",
+        "endocrinology": "Endokrinológia",
+        "cardiology": "Kardiológia",
+        "ophthalmology": "Szemészet",
+        "orthopedics": "Ortopédia"
     },
-    "featuredDoctors": {
-      "title": "Kiemelt orvosok"
+    "ForDoctors": {
+        "title": "Csatlakozzon orvosi hálózatunkhoz",
+        "subtitle": "Bővítse praxisát és érjen el több pácienst a Doktorio.com megbízható egészségügyi platformján keresztül.",
+        "benefits": {
+            "booking": {
+                "title": "Online időpontfoglalás kezelése",
+                "description": "Kezelje hatékonyan időbeosztását intelligens foglalási rendszerünkkel."
+            },
+            "patients": {
+                "title": "Érjen el új pácienseket",
+                "description": "Kapcsolódjon a szakterületét kereső páciensekhez a környéken."
+            },
+            "profile": {
+                "title": "Szakmai profil",
+                "description": "Mutassa be szakértelmét részletes szakmai profillal."
+            }
+        },
+        "form": {
+            "title": "Jelentkezés",
+            "submit": "Jelentkezés beküldése",
+            "success": {
+                "title": "Jelentkezés elküldve!",
+                "message": "Köszönjük érdeklődését a Doktorio.com iránt. Jelentkezését 2-3 munkanapon belül elbíráljuk és felvesszük Önnel a kapcsolatot."
+            }
+        }
+    },
+    "Footer": {
+        "sections": {
+            "specialties": "Szakterületek",
+            "cities": "Népszerű városok",
+            "about": "Rólunk"
+        },
+        "aboutText": "A Doktorio.com segít megtalálni a megfelelő egészségügyi szakembert az Ön környékén. Böngésszen képzett orvosaink és specialistáink hálózatában.",
+        "copyright": "© {year} Doktorio.com. Minden jog fenntartva."
     }
-  },
-  "Doctor": {
-    "languages": "Beszélt nyelvek",
-    "reviews": "{count} vélemény",
-    "review": "{count} vélemény",
-    "consultationFee": "Konzultációs díj",
-    "paymentMethods": "Fizetési módok",
-    "cardAccepted": "Bankkártyás fizetés elérhető",
-    "healthInsurance": "Egészségbiztosítás elfogadott",
-    "selectedTime": "Választott időpont",
-    "availableAppointments": "Elérhető időpontok",
-    "noAvailableSlots": "Nincs szabad időpont"
-  },
-  "Specialties": {
-    "gynecology": "Nőgyógyászat",
-    "internalMedicine": "Belgyógyászat",
-    "otolaryngology": "Fül-orr-gégészet",
-    "psychology": "Pszichológia",
-    "dentistry": "Fogászat",
-    "ultrasound": "Ultrahang",
-    "vascularSurgery": "Érsebészet",
-    "urology": "Urológia",
-    "endocrinology": "Endokrinológia",
-    "cardiology": "Kardiológia",
-    "ophthalmology": "Szemészet",
-    "orthopedics": "Ortopédia"
-  },
-  "ForDoctors": {
-    "title": "Csatlakozzon orvosi hálózatunkhoz",
-    "subtitle": "Bővítse praxisát és érjen el több pácienst a Doktorio.com megbízható egészségügyi platformján keresztül.",
-    "benefits": {
-      "booking": {
-        "title": "Online időpontfoglalás kezelése",
-        "description": "Kezelje hatékonyan időbeosztását intelligens foglalási rendszerünkkel."
-      },
-      "patients": {
-        "title": "Érjen el új pácienseket",
-        "description": "Kapcsolódjon a szakterületét kereső páciensekhez a környéken."
-      },
-      "profile": {
-        "title": "Szakmai profil",
-        "description": "Mutassa be szakértelmét részletes szakmai profillal."
-      }
-    },
-    "form": {
-      "title": "Jelentkezés",
-      "submit": "Jelentkezés beküldése",
-      "success": {
-        "title": "Jelentkezés elküldve!",
-        "message": "Köszönjük érdeklődését a Doktorio.com iránt. Jelentkezését 2-3 munkanapon belül elbíráljuk és felvesszük Önnel a kapcsolatot."
-      }
-    }
-  },
-  "Footer": {
-    "sections": {
-      "specialties": "Szakterületek",
-      "cities": "Népszerű városok",
-      "about": "Rólunk"
-    },
-    "aboutText": "A Doktorio.com segít megtalálni a megfelelő egészségügyi szakembert az Ön környékén. Böngésszen képzett orvosaink és specialistáink hálózatában.",
-    "copyright": "© {year} Doktorio.com. Minden jog fenntartva."
-  }
 }

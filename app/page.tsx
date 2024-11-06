@@ -4,7 +4,7 @@ import { MapPin, Search } from "lucide-react";
 import { useRouter } from "next/navigation";
 import { useState } from "react";
 import { DoctorList } from "@/components/doctor-list";
-import Image from "next/image";
+import { SpecialtyGrid } from "@/components/specialty-grid";
 
 const cities = [
   "Budapest",
@@ -31,10 +31,10 @@ export default function Home() {
   };
 
   return (
-    <main className="flex-1">
+    <main className="flex-1 space-y-4">
       {/* Hero Section */}
       <div className="bg-primary text-white">
-        <div className="max-w-7xl mx-auto px-4 py-16">
+        <div className="max-w-5xl mx-auto px-4 py-8">
           <h1 className="text-4xl md:text-5xl font-bold mb-4">
             Find Your Healthcare Professional
           </h1>
@@ -43,7 +43,7 @@ export default function Home() {
           </p>
 
           {/* Search Box */}
-          <div className="bg-white rounded-lg p-4 shadow-lg">
+          <div className="bg-white text-black rounded-lg p-4 shadow-lg">
             <div className="grid gap-4 md:grid-cols-[1fr,1fr,auto]">
               <div className="relative">
                 <div className="absolute inset-y-0 left-3 flex items-center pointer-events-none">
@@ -88,40 +88,14 @@ export default function Home() {
       </div>
 
       {/* Popular Specialties */}
-      <div className="max-w-7xl mx-auto px-4 py-16">
+      <div className="max-w-5xl mx-auto px-4">
         <h2 className="text-2xl font-bold mb-8">Popular Medical Specialties</h2>
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-          {[
-            { name: "Cardiology", image: "https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?w=400&h=300&fit=crop" },
-            { name: "Pediatrics", image: "https://images.unsplash.com/photo-1666214280557-f1b5022eb634?w=400&h=300&fit=crop" },
-            { name: "Dermatology", image: "https://images.unsplash.com/photo-1612349317150-e413f6a5b16d?w=400&h=300&fit=crop" },
-            { name: "Orthopedics", image: "https://images.unsplash.com/photo-1579684385127-1ef15d508118?w=400&h=300&fit=crop" },
-          ].map((specialty) => (
-            <div
-              key={specialty.name}
-              className="relative group cursor-pointer overflow-hidden rounded-lg"
-              onClick={() => router.push(`/specialty/${specialty.name.toLowerCase()}`)}
-            >
-              <div className="relative h-48">
-                <Image
-                  src={specialty.image}
-                  alt={specialty.name}
-                  fill
-                  className="object-cover transition-transform group-hover:scale-110"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
-                <h3 className="absolute bottom-4 left-4 text-white font-semibold text-lg">
-                  {specialty.name}
-                </h3>
-              </div>
-            </div>
-          ))}
-        </div>
+        <SpecialtyGrid />
       </div>
 
       {/* Featured Doctors */}
-      <div className="bg-gray-50 py-16">
-        <div className="max-w-7xl mx-auto px-4">
+      <div>
+        <div className="max-w-5xl mx-auto px-4">
           <h2 className="text-2xl font-bold mb-8">Featured Doctors</h2>
           <DoctorList featured limit={4} />
         </div>

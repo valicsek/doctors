@@ -1,31 +1,23 @@
-import Link from "next/link";
+"use client";
 
-const specialties = [
-  "Cardiologist",
-  "Dermatologist",
-  "Neurologist",
-  "Ophthalmologist",
-  "Orthopedist",
-  "Pediatrician",
-  "Psychiatrist",
-  "Urologist",
-];
+import Link from "next/link";
+import { specialties } from "@/components/specialty-grid";
 
 export function Footer() {
   return (
     <footer className="bg-white border-t mt-auto">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+      <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           <div>
             <h3 className="text-lg font-semibold mb-4">Medical Specialties</h3>
             <div className="grid grid-cols-2 gap-2">
-              {specialties.map((specialty) => (
+              {specialties.slice(0, 8).map((specialty) => (
                 <Link
-                  key={specialty}
-                  href={`/specialty/${specialty.toLowerCase()}`}
+                  key={specialty.name}
+                  href={`/specialty/${specialty.slug}`}
                   className="text-gray-600 hover:text-blue-600 transition-colors"
                 >
-                  {specialty}
+                  {specialty.name}
                 </Link>
               ))}
             </div>

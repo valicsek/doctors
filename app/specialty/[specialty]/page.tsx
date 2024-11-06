@@ -26,7 +26,8 @@ export function generateStaticParams() {
     "orthopedics",
     "pediatrics",
     "psychiatry",
-    "urology"
+    "urology",
+    "belgyogyaszat"
   ];
 
   return specialties.map((specialty) => ({

@@ -1,9 +1,10 @@
-"use client";
+'use client';
 
-import { useState } from "react";
-import { Star } from "lucide-react";
+import {useState, useEffect} from 'react';
+import {Star} from 'lucide-react';
 
 interface FilterProps {
+  initialFilters: FilterState;
   onFilterChange: (filters: FilterState) => void;
 }
 
@@ -18,23 +19,18 @@ interface FilterState {
   acceptsHealthInsurance: boolean;
 }
 
-const languages = ["English", "Hungarian", "German", "French", "Turkish"];
-const locations = ["Budapest", "Debrecen", "Szeged", "Pécs", "Győr"];
+const languages = ['English', 'Hungarian', 'German', 'French', 'Turkish'];
+const locations = ['Budapest', 'Debrecen', 'Szeged', 'Pécs', 'Győr'];
 
-export function DoctorFilters({ onFilterChange }: FilterProps) {
-  const [filters, setFilters] = useState<FilterState>({
-    search: "",
-    location: "",
-    languages: [],
-    priceRange: [4000, 89000],
-    rating: 0,
-    hasDiscount: false,
-    acceptsCard: false,
-    acceptsHealthInsurance: false,
-  });
+export function DoctorFilters({initialFilters, onFilterChange}: FilterProps) {
+  const [filters, setFilters] = useState<FilterState>(initialFilters);
+
+  useEffect(() => {
+    setFilters(initialFilters);
+  }, [initialFilters]);
 
   const handleFilterChange = (newFilters: Partial<FilterState>) => {
-    const updatedFilters = { ...filters, ...newFilters };
+    const updatedFilters = {...filters, ...newFilters};
     setFilters(updatedFilters);
     onFilterChange(updatedFilters);
   };
@@ -48,7 +44,7 @@ export function DoctorFilters({ onFilterChange }: FilterProps) {
           placeholder="Keresés..."
           className="w-full px-3 py-2 border rounded-md"
           value={filters.search}
-          onChange={(e) => handleFilterChange({ search: e.target.value })}
+          onChange={(e) => handleFilterChange({search: e.target.value})}
         />
       </div>
 
@@ -57,7 +53,7 @@ export function DoctorFilters({ onFilterChange }: FilterProps) {
         <select
           className="w-full px-3 py-2 border rounded-md"
           value={filters.location}
-          onChange={(e) => handleFilterChange({ location: e.target.value })}
+          onChange={(e) => handleFilterChange({location: e.target.value})}
         >
           <option value="">Válassz helyszínt</option>
           {locations.map((location) => (
@@ -72,10 +68,8 @@ export function DoctorFilters({ onFilterChange }: FilterProps) {
         <h3 className="text-lg font-semibold mb-4">Beszélt idegen nyelv</h3>
         <select
           className="w-full px-3 py-2 border rounded-md"
-          value={filters.languages[0] || ""}
-          onChange={(e) =>
-            handleFilterChange({ languages: [e.target.value] })
-          }
+          value={filters.languages[0] || ''}
+          onChange={(e) => handleFilterChange({languages: [e.target.value]})}
         >
           <option value="">Válassz nyelvet</option>
           {languages.map((language) => (
@@ -96,7 +90,7 @@ export function DoctorFilters({ onFilterChange }: FilterProps) {
             value={filters.priceRange[1]}
             onChange={(e) =>
               handleFilterChange({
-                priceRange: [filters.priceRange[0], parseInt(e.target.value)],
+                priceRange: [filters.priceRange[0], parseInt(e.target.value)]
               })
             }
             className="w-full accent-primary"
@@ -114,9 +108,9 @@ export function DoctorFilters({ onFilterChange }: FilterProps) {
           {[1, 2, 3, 4, 5].map((rating) => (
             <button
               key={rating}
-              onClick={() => handleFilterChange({ rating })}
+              onClick={() => handleFilterChange({rating})}
               className={`p-1 rounded ${
-                filters.rating >= rating ? "text-yellow-500" : "text-gray-300"
+                filters.rating >= rating ? 'text-yellow-500' : 'text-gray-300'
               }`}
             >
               <Star className="h-6 w-6 fill-current" />
@@ -131,7 +125,7 @@ export function DoctorFilters({ onFilterChange }: FilterProps) {
             type="checkbox"
             checked={filters.hasDiscount}
             onChange={(e) =>
-              handleFilterChange({ hasDiscount: e.target.checked })
+              handleFilterChange({hasDiscount: e.target.checked})
             }
             className="rounded border-gray-300 text-primary focus:ring-primary"
           />
@@ -143,7 +137,7 @@ export function DoctorFilters({ onFilterChange }: FilterProps) {
             type="checkbox"
             checked={filters.acceptsCard}
             onChange={(e) =>
-              handleFilterChange({ acceptsCard: e.target.checked })
+              handleFilterChange({acceptsCard: e.target.checked})
             }
             className="rounded border-gray-300 text-primary focus:ring-primary"
           />
@@ -156,7 +150,7 @@ export function DoctorFilters({ onFilterChange }: FilterProps) {
             checked={filters.acceptsHealthInsurance}
             onChange={(e) =>
               handleFilterChange({
-                acceptsHealthInsurance: e.target.checked,
+                acceptsHealthInsurance: e.target.checked
               })
             }
             className="rounded border-gray-300 text-primary focus:ring-primary"

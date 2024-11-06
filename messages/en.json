@@ -5,7 +5,7 @@
       "description": "Search through our network of qualified doctors and specialists"
     },
     "searchBox": {
-      "specialtyPlaceholder": "Search by specialty...",
+      "specialtyPlaceholder": "Search by specialty or doctor name...",
       "cityPlaceholder": "Select a city",
       "searchButton": "Search"
     },
@@ -15,5 +15,66 @@
     "featuredDoctors": {
       "title": "Featured Doctors"
     }
+  },
+  "Doctor": {
+    "languages": "Languages",
+    "reviews": "{count} reviews",
+    "review": "{count} review",
+    "consultationFee": "Consultation fee",
+    "paymentMethods": "Payment Methods",
+    "cardAccepted": "Card payment available",
+    "healthInsurance": "Health insurance accepted",
+    "selectedTime": "Selected Time",
+    "availableAppointments": "Available Appointments",
+    "noAvailableSlots": "No available slots"
+  },
+  "Specialties": {
+    "gynecology": "Gynecology",
+    "internalMedicine": "Internal Medicine",
+    "otolaryngology": "Otolaryngology",
+    "psychology": "Psychology",
+    "dentistry": "Dentistry",
+    "ultrasound": "Ultrasound",
+    "vascularSurgery": "Vascular Surgery",
+    "urology": "Urology",
+    "endocrinology": "Endocrinology",
+    "cardiology": "Cardiology",
+    "ophthalmology": "Ophthalmology",
+    "orthopedics": "Orthopedics"
+  },
+  "ForDoctors": {
+    "title": "Join Our Medical Network",
+    "subtitle": "Expand your practice and reach more patients through Doktorio.com's trusted healthcare platform.",
+    "benefits": {
+      "booking": {
+        "title": "Online Appointment Management",
+        "description": "Efficiently manage your schedule with our smart booking system."
+      },
+      "patients": {
+        "title": "Reach New Patients",
+        "description": "Connect with patients looking for your expertise in your area."
+      },
+      "profile": {
+        "title": "Professional Profile",
+        "description": "Showcase your expertise with a detailed professional profile."
+      }
+    },
+    "form": {
+      "title": "Apply to Join",
+      "submit": "Submit Application",
+      "success": {
+        "title": "Application Submitted!",
+        "message": "Thank you for your interest in joining Doktorio.com. We will review your application and contact you within 2-3 business days."
+      }
+    }
+  },
+  "Footer": {
+    "sections": {
+      "specialties": "Medical Specialties",
+      "cities": "Popular Cities",
+      "about": "About"
+    },
+    "aboutText": "Doktorio.com helps you find the right healthcare professional in your area. Browse through our network of qualified doctors and specialists.",
+    "copyright": "© {year} Doktorio.com. All rights reserved."
   }
 }

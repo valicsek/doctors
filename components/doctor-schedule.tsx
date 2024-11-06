@@ -4,7 +4,7 @@ import { cn } from "@/lib/utils";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 import { useState } from "react";
 import { addDays, format, isSameDay, startOfWeek } from "date-fns";
-import { useRouter } from "next/navigation";
+import { useRouter, useParams } from "next/navigation";
 import { hu } from "date-fns/locale";
 
 export interface TimeSlot {
@@ -33,6 +33,8 @@ interface DoctorScheduleProps {
 
 export function DoctorSchedule({ schedule, className, doctorId }: DoctorScheduleProps) {
   const router = useRouter();
+  const params = useParams();
+  const locale = params.locale as string;
   const [currentWeekStart, setCurrentWeekStart] = useState(startOfWeek(new Date(), { weekStartsOn: 1 }));
   const [selectedDate, setSelectedDate] = useState(new Date());
 
@@ -46,7 +48,7 @@ export function DoctorSchedule({ schedule, className, doctorId }: DoctorSchedule
   const handleSlotClick = (day: string, slot: TimeSlot) => {
     if (!slot.isBooked) {
       const dateStr = `${day}, ${slot.time}`;
-      router.push(`/booking/${doctorId}/${encodeURIComponent(dateStr)}`);
+      router.push(`/${locale}/booking/${doctorId}/${encodeURIComponent(dateStr)}`);
     }
   };
 

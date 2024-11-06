@@ -1,16 +1,36 @@
 "use client";
 
-import { MapPin, Star, Phone, Mail, Globe, Clock } from "lucide-react";
+import { MapPin, Star } from "lucide-react";
 import Image from "next/image";
 import { DoctorSchedule } from "./doctor-schedule";
 import { defaultWeeklySchedule } from "@/lib/data";
 import type { Doctor } from "@/lib/data";
+import { useTranslations } from "next-intl";
 
 interface DoctorProfileProps {
   doctor: Doctor;
 }
 
+function RatingStars({ rating }: { rating: number }) {
+  return (
+    <div className="flex">
+      {[1, 2, 3, 4, 5].map((star) => (
+        <Star
+          key={star}
+          className={`h-5 w-5 ${
+            star <= rating
+              ? "text-yellow-400 fill-current"
+              : "text-gray-300 fill-current"
+          }`}
+        />
+      ))}
+    </div>
+  );
+}
+
 export function DoctorProfile({ doctor }: DoctorProfileProps) {
+  const t = useTranslations('Doctor');
+
   return (
     <div className="max-w-5xl mx-auto px-4 py-8">
       {/* Header Section */}
@@ -28,12 +48,17 @@ export function DoctorProfile({ doctor }: DoctorProfileProps) {
             </div>
             
             <div className="flex-1">
-              <div className="flex items-center gap-3 mb-4">
+              <div className="flex flex-col gap-2 mb-4">
                 <h1 className="text-3xl font-bold">{doctor.name}</h1>
                 {doctor.rating && (
-                  <div className="flex items-center text-yellow-500">
-                    <Star className="h-5 w-5 fill-current" />
-                    <span className="ml-1 font-medium">{doctor.rating}</span>
+                  <div className="flex items-center gap-2">
+                    <div className="flex items-center gap-1">
+                      <RatingStars rating={doctor.rating} />
+                      <span className="text-lg font-medium text-gray-700">{doctor.rating}</span>
+                    </div>
+                    <span className="text-gray-500">
+                      (176 {t('reviews', { count: 176 })})
+                    </span>
                   </div>
                 )}
               </div>
@@ -46,30 +71,15 @@ export function DoctorProfile({ doctor }: DoctorProfileProps) {
                   <span>{doctor.city}</span>
                 </div>
 
-                {doctor.phone && (
-                  <div className="flex items-center text-gray-600">
-                    <Phone className="h-5 w-5 mr-3" />
-                    <span>{doctor.phone}</span>
-                  </div>
-                )}
-
-                {doctor.availability && (
-                  <div className="flex items-center text-gray-600">
-                    <Clock className="h-5 w-5 mr-3" />
-                    <span>{doctor.availability}</span>
-                  </div>
-                )}
-
-                <div className="flex items-center text-gray-600">
-                  <Globe className="h-5 w-5 mr-3" />
-                  <span>Languages: {doctor.languages.join(", ")}</span>
+                <div className="text-gray-600">
+                  <span className="font-medium">{t('languages')}:</span> {doctor.languages.join(", ")}
                 </div>
               </div>
 
               <div className="mt-6 pt-6 border-t">
                 <div className="flex flex-wrap gap-4">
                   <div className="bg-blue-50 px-4 py-2 rounded-md">
-                    <p className="text-sm text-gray-600">Consultation fee</p>
+                    <p className="text-sm text-gray-600">{t('consultationFee')}</p>
                     <p className="text-lg font-semibold text-gray-900">
                       {doctor.price.toLocaleString()} Ft
                     </p>
@@ -77,15 +87,15 @@ export function DoctorProfile({ doctor }: DoctorProfileProps) {
 
                   {doctor.acceptsCard && (
                     <div className="bg-green-50 px-4 py-2 rounded-md">
-                      <p className="text-sm text-gray-600">Payment</p>
-                      <p className="text-lg font-semibold text-gray-900">Card accepted</p>
+                      <p className="text-sm text-gray-600">{t('paymentMethods')}</p>
+                      <p className="text-lg font-semibold text-gray-900">{t('cardAccepted')}</p>
                     </div>
                   )}
 
                   {doctor.acceptsHealthInsurance && (
                     <div className="bg-purple-50 px-4 py-2 rounded-md">
-                      <p className="text-sm text-gray-600">Insurance</p>
-                      <p className="text-lg font-semibold text-gray-900">Health insurance accepted</p>
+                      <p className="text-sm text-gray-600">{t('paymentMethods')}</p>
+                      <p className="text-lg font-semibold text-gray-900">{t('healthInsurance')}</p>
                     </div>
                   )}
                 </div>
@@ -97,7 +107,7 @@ export function DoctorProfile({ doctor }: DoctorProfileProps) {
 
       {/* Schedule Section */}
       <div className="bg-white rounded-lg shadow-sm p-6">
-        <h2 className="text-xl font-semibold mb-6">Available Appointments</h2>
+        <h2 className="text-xl font-semibold mb-6">{t('availableAppointments')}</h2>
         <DoctorSchedule schedule={defaultWeeklySchedule} doctorId={doctor.id} />
       </div>
     </div>

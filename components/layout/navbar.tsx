@@ -18,11 +18,11 @@ export function Navbar() {
 
   return (
     <nav className="bg-primary text-white">
-      <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="max-w-5xl mx-auto sm:px-6">
         <div className="flex justify-between h-16 items-center">
-          <Link href="/" className="flex items-center">
+          <Link href={`/${currentLocale}`} className="flex items-center">
             <Search className="h-6 w-6 mr-2" />
-            <span className="text-xl font-bold">DoctorFinder</span>
+            <span className="text-xl font-bold">Doktorio.com</span>
           </Link>
 
           <div className="flex items-center gap-4">
@@ -37,12 +37,18 @@ export function Navbar() {
                 </option>
               ))}
             </select>
-            <button className="text-white hover:text-white/90 px-4 py-2 rounded-md transition-colors">
+            <Link
+              href={`/${currentLocale}/for-doctors`}
+              className="text-white hover:text-white/90 px-4 py-2 rounded-md transition-colors"
+            >
               For Doctors
-            </button>
-            <button className="bg-white text-primary hover:bg-white/90 px-4 py-2 rounded-md transition-colors">
+            </Link>
+            <Link
+              href={`/${currentLocale}/signin`}
+              className="bg-white text-primary hover:bg-white/90 px-4 py-2 rounded-md transition-colors"
+            >
               Sign In
-            </button>
+            </Link>
           </div>
         </div>
       </div>

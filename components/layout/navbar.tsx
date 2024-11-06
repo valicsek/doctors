@@ -34,7 +34,7 @@ export function Navbar() {
                                 </span>
                             </Link>
                             <span className="text-sm font-bold text-tertiary">
-                                752 booking today
+                                215 booking today
                             </span>
                         </div>
 

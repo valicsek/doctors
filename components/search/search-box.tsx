@@ -82,7 +82,7 @@ export function SearchBox() {
                         setShowSuggestions(true)
                     }}
                     onFocus={() => setShowSuggestions(true)}
-                    className="w-full pl-10 pr-4 py-3 border border-gray-300 rounded-l-full md:rounded-l-full md:rounded-r-none focus:outline-none focus:ring-2 focus:ring-primary/20 focus:border-primary text-gray-500"
+                    className="w-full pl-10 pr-4 py-3 border border-gray-300 rounded-lg md:rounded-l-full md:rounded-r-none focus:outline-none focus:ring-2 focus:ring-primary/20 focus:border-primary text-gray-500"
                 />
                 {/* Suggestions dropdown */}
                 {showSuggestions && suggestions.length > 0 && (
@@ -102,14 +102,14 @@ export function SearchBox() {
                 )}
             </div>
 
-            <div className="relative flex-1">
+            <div className="relative flex-1 mt-2 md:mt-0">
                 <div className="absolute inset-y-0 left-3 flex items-center pointer-events-none">
                     <MapPin className="h-5 w-5 text-gray-400" />
                 </div>
                 <select
                     value={city}
                     onChange={(e) => setCity(e.target.value)}
-                    className="w-full pl-10 pr-4 py-3 border border-gray-300 md:rounded-none focus:outline-none focus:ring-2 focus:ring-primary/20 focus:border-primary appearance-none bg-white text-gray-500"
+                    className="w-full pl-10 pr-4 py-3 border border-gray-300 rounded-lg md:rounded-none focus:outline-none focus:ring-2 focus:ring-primary/20 focus:border-primary appearance-none bg-white text-gray-500"
                 >
                     <option value="">{t('cityPlaceholder')}</option>
                     {cities.map((city) => (
@@ -122,7 +122,7 @@ export function SearchBox() {
 
             <button
                 onClick={handleSearch}
-                className="px-8 py-3 bg-secondary text-white rounded-r-full md:rounded-r-full md:rounded-l-none hover:bg-primary/90 transition-colors"
+                className="mt-2 md:mt-0 px-8 py-3 bg-secondary text-white rounded-lg md:rounded-l-none md:rounded-r-full hover:bg-primary/90 transition-colors"
             >
                 {t('searchButton')}
             </button>

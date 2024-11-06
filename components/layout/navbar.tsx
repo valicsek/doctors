@@ -20,13 +20,20 @@ export function Navbar() {
         <nav className="bg-primary text-white">
             <div className="max-w-5xl mx-auto">
                 <div className="flex justify-between h-16 items-center">
-                    <Link
-                        href={`/${currentLocale}`}
-                        className="flex items-center"
-                    >
-                        <Search className="h-6 w-6 mr-2" />
-                        <span className="text-xl font-bold">Doktorio.com</span>
-                    </Link>
+                    <div>
+                        <Link
+                            href={`/${currentLocale}`}
+                            className="flex items-center gap-2 justify-center"
+                        >
+                            <Search className="h-6 w-6 mr-2" />
+                            <span className="text-xl font-bold">
+                                Doktorio.com
+                            </span>
+                        </Link>
+                        <span className="text-sm font-bold text-tertiary">
+                            752 booking today
+                        </span>
+                    </div>
 
                     <div className="flex items-center gap-4">
                         <select

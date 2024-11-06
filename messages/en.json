@@ -16,6 +16,23 @@
             "title": "Featured Doctors"
         }
     },
+    "SignIn": {
+        "title": "Welcome back",
+        "subtitle": "Sign in to your account",
+        "email": "Email address",
+        "emailPlaceholder": "Enter your email",
+        "password": "Password",
+        "passwordPlaceholder": "Enter your password",
+        "signInButton": "Sign in",
+        "signingIn": "Signing in...",
+        "orContinueWith": "Or continue with",
+        "googleSignIn": "Sign in with Google",
+        "forgotPassword": "Forgot your password?",
+        "errors": {
+            "invalidCredentials": "Invalid email or password",
+            "googleFailed": "Google sign in failed"
+        }
+    },
     "Navbar": {
         "forDoctors": "For Doctors",
         "signIn": "Sign In",
@@ -46,32 +63,6 @@
         "cardiology": "Cardiology",
         "ophthalmology": "Ophthalmology",
         "orthopedics": "Orthopedics"
-    },
-    "ForDoctors": {
-        "title": "Join Our Medical Network",
-        "subtitle": "Expand your practice and reach more patients through Doktorio.com's trusted healthcare platform.",
-        "benefits": {
-            "booking": {
-                "title": "Online Appointment Management",
-                "description": "Efficiently manage your schedule with our smart booking system."
-            },
-            "patients": {
-                "title": "Reach New Patients",
-                "description": "Connect with patients looking for your expertise in your area."
-            },
-            "profile": {
-                "title": "Professional Profile",
-                "description": "Showcase your expertise with a detailed professional profile."
-            }
-        },
-        "form": {
-            "title": "Apply to Join",
-            "submit": "Submit Application",
-            "success": {
-                "title": "Application Submitted!",
-                "message": "Thank you for your interest in joining Doktorio.com. We will review your application and contact you within 2-3 business days."
-            }
-        }
     },
     "Footer": {
         "sections": {

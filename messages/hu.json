@@ -16,6 +16,23 @@
             "title": "Kiemelt orvosok"
         }
     },
+    "SignIn": {
+        "title": "Üdvözöljük újra",
+        "subtitle": "Jelentkezzen be fiókjába",
+        "email": "Email cím",
+        "emailPlaceholder": "Adja meg email címét",
+        "password": "Jelszó",
+        "passwordPlaceholder": "Adja meg jelszavát",
+        "signInButton": "Bejelentkezés",
+        "signingIn": "Bejelentkezés...",
+        "orContinueWith": "Vagy jelentkezzen be",
+        "googleSignIn": "Bejelentkezés Google-lel",
+        "forgotPassword": "Elfelejtette jelszavát?",
+        "errors": {
+            "invalidCredentials": "Érvénytelen email cím vagy jelszó",
+            "googleFailed": "Google bejelentkezés sikertelen"
+        }
+    },
     "Navbar": {
         "forDoctors": "Orvosoknak",
         "signIn": "Bejelentkezés",
@@ -46,32 +63,6 @@
         "cardiology": "Kardiológia",
         "ophthalmology": "Szemészet",
         "orthopedics": "Ortopédia"
-    },
-    "ForDoctors": {
-        "title": "Csatlakozzon orvosi hálózatunkhoz",
-        "subtitle": "Bővítse praxisát és érjen el több pácienst a Doktorio.com megbízható egészségügyi platformján keresztül.",
-        "benefits": {
-            "booking": {
-                "title": "Online időpontfoglalás kezelése",
-                "description": "Kezelje hatékonyan időbeosztását intelligens foglalási rendszerünkkel."
-            },
-            "patients": {
-                "title": "Érjen el új pácienseket",
-                "description": "Kapcsolódjon a szakterületét kereső páciensekhez a környéken."
-            },
-            "profile": {
-                "title": "Szakmai profil",
-                "description": "Mutassa be szakértelmét részletes szakmai profillal."
-            }
-        },
-        "form": {
-            "title": "Jelentkezés",
-            "submit": "Jelentkezés beküldése",
-            "success": {
-                "title": "Jelentkezés elküldve!",
-                "message": "Köszönjük érdeklődését a Doktorio.com iránt. Jelentkezését 2-3 munkanapon belül elbíráljuk és felvesszük Önnel a kapcsolatot."
-            }
-        }
     },
     "Footer": {
         "sections": {

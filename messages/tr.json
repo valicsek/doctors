@@ -15,5 +15,62 @@
         "featuredDoctors": {
             "title": "Öne Çıkan Doktorlar"
         }
+    },
+    "SignIn": {
+        "title": "Tekrar Hoşgeldiniz",
+        "subtitle": "Hesabınıza giriş yapın",
+        "email": "E-posta adresi",
+        "emailPlaceholder": "E-posta adresinizi girin",
+        "password": "Şifre",
+        "passwordPlaceholder": "Şifrenizi girin",
+        "signInButton": "Giriş yap",
+        "signingIn": "Giriş yapılıyor...",
+        "orContinueWith": "Veya şununla devam edin",
+        "googleSignIn": "Google ile giriş yap",
+        "forgotPassword": "Şifrenizi mi unuttunuz?",
+        "errors": {
+            "invalidCredentials": "Geçersiz e-posta veya şifre",
+            "googleFailed": "Google ile giriş başarısız oldu"
+        }
+    },
+    "Navbar": {
+        "forDoctors": "Doktorlar İçin",
+        "signIn": "Giriş Yap",
+        "bookingsToday": "Bugün {count} randevu"
+    },
+    "Doctor": {
+        "languages": "Konuşulan Diller",
+        "reviews": "{count} değerlendirme",
+        "review": "{count} değerlendirme",
+        "consultationFee": "Muayene ücreti",
+        "paymentMethods": "Ödeme Yöntemleri",
+        "cardAccepted": "Kredi kartı geçerli",
+        "healthInsurance": "Sağlık sigortası kabul edilir",
+        "selectedTime": "Seçilen Zaman",
+        "availableAppointments": "Müsait Randevular",
+        "noAvailableSlots": "Müsait zaman yok"
+    },
+    "Specialties": {
+        "gynecology": "Kadın Hastalıkları",
+        "internalMedicine": "İç Hastalıkları",
+        "otolaryngology": "Kulak Burun Boğaz",
+        "psychology": "Psikoloji",
+        "dentistry": "Diş Hekimliği",
+        "ultrasound": "Ultrason",
+        "vascularSurgery": "Damar Cerrahisi",
+        "urology": "Üroloji",
+        "endocrinology": "Endokrinoloji",
+        "cardiology": "Kardiyoloji",
+        "ophthalmology": "Göz Hastalıkları",
+        "orthopedics": "Ortopedi"
+    },
+    "Footer": {
+        "sections": {
+            "specialties": "Tıbbi Uzmanlıklar",
+            "cities": "Popüler Şehirler",
+            "about": "Hakkımızda"
+        },
+        "aboutText": "Doktorio.com bölgenizdeki doğru sağlık uzmanını bulmanıza yardımcı olur. Kalifiye doktorlarımız ve uzmanlarımızdan oluşan ağımızda arama yapın.",
+        "copyright": "© {year} Doktorio.com. Tüm hakları saklıdır."
     }
 }

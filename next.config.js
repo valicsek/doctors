@@ -1,13 +1,15 @@
+// @ts-check
+
+const withNextIntl = require('next-intl/plugin')();
+
 /** @type {import('next').NextConfig} */
-const nextConfig = {
-  output: 'export',
+const config = {
   eslint: {
-    ignoreDuringBuilds: true,
+    ignoreDuringBuilds: true
   },
-  images: { 
-    unoptimized: true,
+  images: {
     domains: ['images.unsplash.com']
-  },
+  }
 };
 
-module.exports = nextConfig;
+module.exports = withNextIntl(config);

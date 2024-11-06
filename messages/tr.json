@@ -1,0 +1,19 @@
+{
+  "HomePage": {
+    "heroSection": {
+      "title": "I had a great time with bears",
+      "description": "Search through our network of qualified doctors and specialists"
+    },
+    "searchBox": {
+      "specialtyPlaceholder": "Search by specialty...",
+      "cityPlaceholder": "Select a city",
+      "searchButton": "Search"
+    },
+    "popularSpecialties": {
+      "title": "Popular Medical Specialties"
+    },
+    "featuredDoctors": {
+      "title": "Featured Doctors"
+    }
+  }
+}

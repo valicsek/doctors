@@ -13,7 +13,7 @@ interface DoctorCardProps {
 }
 
 export function DoctorCard({ doctor, schedule }: DoctorCardProps) {
-  const doctorProfileUrl = `/${slugify(doctor.specialty)}/${slugify(doctor.name)}/?doctor_id=${doctor.id}`;
+  const doctorProfileUrl = `/${slugify(doctor.specialty)}/${slugify(doctor.name)}/${doctor.id}`;
 
   return (
     <div className="bg-white shadow-sm overflow-hidden border">
@@ -21,15 +21,9 @@ export function DoctorCard({ doctor, schedule }: DoctorCardProps) {
         <div className="p-4">
           <div className="flex gap-6">
             <div className="relative w-40 h-40 flex-shrink-0">
-              <Image
-                src={doctor.image}
-                alt={doctor.name}
-                fill
-                className="object-cover rounded-lg"
-                sizes="160px"
-              />
+              <Image src={doctor.image} alt={doctor.name} fill className="object-cover rounded-lg" sizes="160px" />
             </div>
-            
+
             <div className="flex-1 min-w-0">
               <div className="flex flex-col h-full justify-between">
                 <div className="space-y-1">
@@ -52,15 +46,14 @@ export function DoctorCard({ doctor, schedule }: DoctorCardProps) {
                     <span>{doctor.city}</span>
                   </div>
                   <div className="text-gray-600">
-                    <span className="font-medium">Languages:</span>{" "}
-                    {doctor.languages.join(", ")}
+                    <span className="font-medium">Languages:</span> {doctor.languages.join(", ")}
                   </div>
                 </div>
               </div>
             </div>
           </div>
         </div>
-        
+
         {/* Schedule Section */}
         <div className="border-t pt-4 bg-gray-50 p-4">
           <DoctorSchedule schedule={schedule} doctorId={doctor.id} />

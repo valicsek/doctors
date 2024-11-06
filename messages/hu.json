@@ -1,19 +1,19 @@
 {
   "HomePage": {
     "heroSection": {
-      "title": "Magyarul lesz ez",
-      "description": "Search through our network of qualified doctors and specialists"
+      "title": "Találja meg egészségügyi szakemberét",
+      "description": "Keressen képzett orvosokat és specialistákat hálózatunkban"
     },
     "searchBox": {
-      "specialtyPlaceholder": "Search by specialty...",
-      "cityPlaceholder": "Select a city",
-      "searchButton": "Search"
+      "specialtyPlaceholder": "Keresés szakterület szerint...",
+      "cityPlaceholder": "Válasszon várost",
+      "searchButton": "Keresés"
     },
     "popularSpecialties": {
-      "title": "Popular Medical Specialties"
+      "title": "Népszerű szakterületek"
     },
     "featuredDoctors": {
-      "title": "Featured Doctors"
+      "title": "Kiemelt orvosok"
     }
   }
 }

@@ -1,19 +1,19 @@
 {
   "HomePage": {
     "heroSection": {
-      "title": "I had a great time with bears",
-      "description": "Search through our network of qualified doctors and specialists"
+      "title": "Sağlık Uzmanınızı Bulun",
+      "description": "Kalifiye doktorlar ve uzmanlardan oluşan ağımızda arama yapın"
     },
     "searchBox": {
-      "specialtyPlaceholder": "Search by specialty...",
-      "cityPlaceholder": "Select a city",
-      "searchButton": "Search"
+      "specialtyPlaceholder": "Uzmanlık alanına göre ara...",
+      "cityPlaceholder": "Şehir seçin",
+      "searchButton": "Ara"
     },
     "popularSpecialties": {
-      "title": "Popular Medical Specialties"
+      "title": "Popüler Tıbbi Uzmanlıklar"
     },
     "featuredDoctors": {
-      "title": "Featured Doctors"
+      "title": "Öne Çıkan Doktorlar"
     }
   }
 }

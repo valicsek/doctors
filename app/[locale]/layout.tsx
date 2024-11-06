@@ -17,7 +17,7 @@ export const metadata: Metadata = {
 
 export default async function Layout({children}: {children: ReactNode}) {
   // set language based on browser locale
-  const browserLocale = 'hu'; // navigator.language;
+  const browserLocale = 'en'; // navigator.language;
   setRequestLocale(browserLocale);
 
   // get translation messages

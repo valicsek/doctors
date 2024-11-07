@@ -38,7 +38,7 @@ export default function Home() {
                     <h2 className="text-2xl font-bold mb-8">
                         {t('featuredDoctors.title')}
                     </h2>
-                    <DoctorList featured limit={4} />
+                    <DoctorList featured limit={10} />
                 </div>
             </div>
         </main>

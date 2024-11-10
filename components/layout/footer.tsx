@@ -11,7 +11,7 @@ export function Footer() {
     const t = useTranslations('Footer')
 
     return (
-        <footer className="bg-white border-t mt-auto">
+        <footer className="bg-[#f5f5f5] mt-auto">
             <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
                     <div>
